@@ -182,7 +182,7 @@ void PotreeConverter::generatePage(string name){
 		string line;
 		while(getline(in, line)){
 			if(line.find("<!-- INCLUDE POINTCLOUD -->") != string::npos){
-				out << "\t\tPotree.loadPointCloud(\"pointclouds/" << name << "/cloud.js\", \"" << name << "\", e => {" << endl;
+				out << "\t\tPotree.loadPointCloud(\"/converted/pointclouds/" << name << "/cloud.js\", \"" << name << "\", e => {" << endl;
 				out << "\t\t\tlet pointcloud = e.pointcloud;\n";
 				out << "\t\t\tlet material = pointcloud.material;\n";
 
